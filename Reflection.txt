@@ -1,5 +1,4 @@
-This is an example file for reflection in IBI1_2023-24.
+Practical classes are very useful to me. In the coding study, practicing is very important.
+I think I have done everything I learned well in practical classes. Some of the knowledge is challenging to me such as using Git. But finally I have solved all the questions under the help of my professors and teacher assistants. 
 
-During this course, I have learnt version control, how to navigate Unix-like systems and how to write simple programs in Python.
-
-I have also learnt to write careful instructions when communicating online!
+I think I can do more creative thing on the Practical.
