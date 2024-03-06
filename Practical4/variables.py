@@ -9,7 +9,7 @@ X = True
 Y = False
 W = X or Y
 # X       Y       W
-# True    True    True
+# True    True    False
 # True    False   True
 # False   True    True
 # False   False   False
