@@ -6,16 +6,16 @@ import matplotlib.pyplot as plt
 Sleeping=8
 Classes=6
 Studying=3.5
-TV=2
+Tv=2
 Music=1
-others=24-Sleeping-Classes-Studying-TV-Music
+others=24-Sleeping-Classes-Studying-Tv-Music
 #generate a dict, 'type1': data1, 'type2': data2,......
-dict = {'Sleeping': Sleeping,'Classes':Classes,'Studying': Studying,'TV': TV,'Music': Music,'others': others}
+dict = {'Sleeping': Sleeping,'Classes':Classes,'Studying': Studying,'TV': Tv,'Music': Music,'others': others}
 print(dict)
 
 lables = ["Sleeping", "Classes", "Studying", "TV", "Music","others"]
 
-time_an_average_day = [Sleeping, Classes, Studying, TV, Music,others]
+time_an_average_day = [Sleeping, Classes, Studying, Tv, Music,others]
 #generate a pie chart, lead the lables and the data to the plt.pie, use autopct to show the percentage
 #So, lables = lables(the list I created), and autopct='%1.1f%%'
 plt.figure()
