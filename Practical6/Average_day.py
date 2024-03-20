@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import statistics as stat
 # Pseudocode:
 # introduce the data given
 # define variables used for input,then use these variables to create a dictionary
@@ -12,6 +13,7 @@ others=24-Sleeping-Classes-Studying-Tv-Music
 #generate a dict, 'type1': data1, 'type2': data2,......
 dict = {'Sleeping': Sleeping,'Classes':Classes,'Studying': Studying,'TV': Tv,'Music': Music,'others': others}
 print(dict)
+list(dict.values())
 
 lables = ["Sleeping", "Classes", "Studying", "TV", "Music","others"]
 
@@ -24,3 +26,5 @@ plt.pie(time_an_average_day, labels=lables,autopct='%1.1f%%' )
 plt.show()
 
 plt.clf()
+
+print(stat.mean(list(dict.values())))
