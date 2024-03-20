@@ -19,7 +19,7 @@ CN_list = ["Haining","Hangzhou","Beijing","Shanghai"]
 
 plt.figure(figsize=(10,6))
 plt.subplot(1,2,1)
-plt.bar(UK_list,uk_cities,color=['b'],width=0.5,hatch='/') #Adjust the properties of the chart.
+plt.bar(UK_list,uk_cities,color=['b'],width=0.5,hatch='\\') #Adjust the properties of the chart.
 for a,b,i in zip(UK_list,uk_cities,range(len(UK_list))): # zip function
     plt.text(a,b+0.01,"%.2f"%uk_cities[i],ha='center',fontsize=10) # plt.text function
 plt.title("Distribution of city sizes in the UK")
@@ -27,7 +27,7 @@ plt.ylabel("Population(millions)")
 plt.xlabel("Cities in UK")
 
 plt.subplot(1,2,2)
-plt.bar(CN_list,china_cities,color=['r'],width=0.5,hatch='\\') #Adjust the properties of the chart.
+plt.bar(CN_list,china_cities,color=['r'],width=0.5,hatch='/') #Adjust the properties of the chart.
 for a,b,i in zip(CN_list,china_cities,range(len(UK_list))): # zip function
     plt.text(a,b+0.01,"%.2f"%china_cities[i],ha='center',fontsize=10) # plt.text function
 plt.title("Distribution of city sizes in the China")
