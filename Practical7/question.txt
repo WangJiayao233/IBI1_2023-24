@@ -1,0 +1,8 @@
+Question: Plot a boxplot of DALYs across countries in 2019.
+
+Answer: Line 29 - Line 38 in dalys.py
+
+Results: 
+There are several about 4 outliers over the upper edge. Because the median value is close to the bottom of the box, 
+the most DALYs value of countries in 2019 are relatively small and the data is uneven. Because the the bar above the box diagram is very long, 
+the standard deviation is a relatively high and the change of data is quicker over the upper quartile.
