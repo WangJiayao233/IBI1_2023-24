@@ -12,4 +12,4 @@ while (p <= 90):
     i += 1
     p = p * 2
 
-print("On day "+str(i)+ " the cell density goes over 90%, which is the maximum number of days I can have a holiday from the lab.")
+print("On day "+str(i)+ " the cell density goes over 90%, but to avoid exceeding, the maximum number of days I can have a holiday from the lab should be 4.")
