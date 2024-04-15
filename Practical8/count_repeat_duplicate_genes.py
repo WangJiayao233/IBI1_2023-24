@@ -47,7 +47,7 @@ fout.close()
 #use a temporary file to restore the sequences of duplication.
 dupilicate_seq = open('temp.fa','r')
 list_seq = dupilicate_seq.readlines()
-line_cnt = 0
+line_cnt = 0 #count the line number
 for line in list_seq:
     if len(re.findall(rep_seq, line)) > 0:
         fout2 = open(rep_seq+'_duplicate_genes.fa','a')
@@ -61,7 +61,9 @@ for line in list_seq:
     elif len(re.findall(rep_seq,line)) == 0:
         line_cnt += 1
         continue
-
+    else: #avoid some bugs maybe
+        line_cnt += 1 
+        continue
 dupilicate_seq.close()
 fout2.close()
 
