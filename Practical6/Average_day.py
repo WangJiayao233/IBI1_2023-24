@@ -30,3 +30,7 @@ plt.show()
 plt.clf()
 #print the mean of the data
 print(stat.mean(list(dict_activities.values())))
+
+#The hours of an activity input by the user
+activity = 'Classes'
+print(dict_activities[activity])
