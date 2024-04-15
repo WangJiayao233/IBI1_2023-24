@@ -7,7 +7,10 @@ e = b - c
 
 X = True
 Y = False
-W = X or Y
+if X==True and Y==True:
+    W = False
+else:
+    W = X or Y
 # X       Y       W
 # True    True    False
 # True    False   True
