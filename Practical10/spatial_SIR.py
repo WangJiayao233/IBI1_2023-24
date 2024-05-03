@@ -6,7 +6,7 @@ matplotlib.use('TkAgg') #Use TKAgg renderer to show the interactive image(dynami
 population = np.zeros((100 , 100))
 outbreak = np.random.choice(range(100),2) #return an array
 population[outbreak[0], outbreak[1]] = 1
-plt.ion()
+plt.ion() #Turn on the interactive mode, cited from https://blog.csdn.net/leo0308/article/details/132499565?ops_request_misc=&request_id=&biz_id=102&utm_term=imshow如何做动态图&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-132499565.142^v100^pc_search_result_base2&spm=1018.2226.3001.4187
 fig = plt.figure(figsize =(6 ,4), dpi=150)
 
 
