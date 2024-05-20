@@ -1,5 +1,5 @@
 import os
-os.chdir('/Users/wangjiayao/Desktop/Python/Notes/IBI1_2023-24/IBI1_2023-24/Practical13')
+os.chdir('/Users/wangjiayao/Desktop/Python/Notes/IBI1_2023-24/IBI1_2023-24/Practical 13')
 
 def read_seq(file):
     seq = ""
