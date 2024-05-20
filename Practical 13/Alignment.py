@@ -27,6 +27,11 @@ seq_mouse = read_seq(file_seq_mouse)
 seq_rat = read_seq(file_seq_rat)
 
 # for the relationship between human and mouse
+#psudocode:
+# calculate the distance between two species
+# calculate the distance of amino acids
+# calculate the percentage of the same amino acids
+# reserve particular decimal
 dis_human_mouse = distance(seq_human, seq_mouse)
 print(dis_human_mouse)
 same_amino = (len(seq_human)-dis_human_mouse)/len(seq_human)
