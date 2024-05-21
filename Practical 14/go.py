@@ -1,8 +1,10 @@
 #use DOM
 import time
-start = time.time()
+
+start = time.time() #start time recording
 import xml.dom.minidom
 from xml.sax.xmlreader import AttributesImpl
+
 DOMTree = xml.dom.minidom.parse("/Users/wangjiayao/Desktop/Python/Notes/IBI1_2023-24/IBI1_2023-24/Practical 14/go_obo.xml")
 
 collection = DOMTree.documentElement
@@ -25,11 +27,11 @@ print('molecular_function:', cnt_mole_func)
 print('biological_process:', cnt_bio_process)
 print('cellular_component:', cnt_cell_comp)
 
-end = time.time()
-print('Time(DOM):', end-start)
+end = time.time() #end time recording
+print('Time(DOM API):', end-start,'seconds')
 
 #use SAX API
-start2 = time.time()
+start2 = time.time() #start time recording
 import xml.sax
 cnt_mole_func2 = 0
 cnt_bio_process2 = 0
@@ -76,8 +78,9 @@ print('molecular_function:', cnt_mole_func2)
 print('biological_process:', cnt_bio_process2)
 print('cellular_component:', cnt_cell_comp2)
     
-end2 = time.time()
-print('Time(SAX):', end2-start2)
+end2 = time.time() #end time recording
+print('Time(SAX API):', end2-start2,'seconds')
+#### The time of SAX API is shorter than DOM API. SAX API is the quickest.
 
 # ready to print graphs
 import matplotlib.pyplot as plt
@@ -93,7 +96,7 @@ SAX_data = [cnt_mole_func2, cnt_bio_process2, cnt_cell_comp2]
 plt.subplot(1,2,1)
 plt.bar(labels, DOM_data, color=['b'], width=0.5)
 for a,b,i in zip(labels, DOM_data, range(len(labels))):
-    plt.text(a, b+0.15, str(DOM_data[i]), ha='center', fontsize=10) #This code of line 86 & 87 was obtained from https://www.csdn.net
+    plt.text(a, b+0.15, str(DOM_data[i]), ha='center', fontsize=10) #This code of line 98 & 99 was cited from https://www.csdn.net
 
 plt.title('Distribution of GO terms(DOM)')
 plt.ylabel('Frequency of GO terms')
@@ -103,7 +106,7 @@ plt.xlabel('Categories of GO terms')
 plt.subplot(1,2,2)
 plt.bar(labels, SAX_data, color=['r'], width=0.5)
 for a,b,i in zip(labels, SAX_data, range(len(labels))):
-    plt.text(a, b+0.15, str(SAX_data[i]), ha='center', fontsize=10) #This code of line 96 & 97 was obtained from https://www.csdn.net
+    plt.text(a, b+0.15, str(SAX_data[i]), ha='center', fontsize=10) #This code of line 108 & 109 was cited from https://www.csdn.net
 
 plt.title('Distribution of GO terms(SAX)')
 plt.ylabel('Frequency of GO terms')
@@ -111,3 +114,6 @@ plt.xlabel('Categories of GO terms')
 
 plt.show()
 plt.clf()
+
+
+# The time of SAX API is shorter than DOM API. SAX API is the quickest.
