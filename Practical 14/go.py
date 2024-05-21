@@ -1,4 +1,6 @@
 #use DOM
+import time
+start = time.time()
 import xml.dom.minidom
 from xml.sax.xmlreader import AttributesImpl
 DOMTree = xml.dom.minidom.parse("/Users/wangjiayao/Desktop/Python/Notes/IBI1_2023-24/IBI1_2023-24/Practical 14/go_obo.xml")
@@ -23,7 +25,11 @@ print('molecular_function:', cnt_mole_func)
 print('biological_process:', cnt_bio_process)
 print('cellular_component:', cnt_cell_comp)
 
+end = time.time()
+print('Time(DOM):', end-start)
+
 #use SAX API
+start2 = time.time()
 import xml.sax
 cnt_mole_func2 = 0
 cnt_bio_process2 = 0
@@ -69,6 +75,9 @@ print('SAX:')
 print('molecular_function:', cnt_mole_func2)
 print('biological_process:', cnt_bio_process2)
 print('cellular_component:', cnt_cell_comp2)
+    
+end2 = time.time()
+print('Time(SAX):', end2-start2)
 
 # ready to print graphs
 import matplotlib.pyplot as plt
